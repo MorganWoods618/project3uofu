@@ -1,45 +1,30 @@
-import React from 'react'
+import {
+  Editable,
+  EditableInput,
+  EditableTextarea,
+  EditablePreview,
+  Center,
+  Text,
+  Heading,
+  VStack,
+  Button,
+  Input,
+  HStack,
+  SimpleGrid,
+  Image,
+  Badge,
+  UseToast,
+  ChakraProvider,
+} from "@chakra-ui/react";
 
-const DestinationPage = () => {
-  const [formStatus, setFormStatus] = React.useState('Send')
-  const onSubmit = (e) => {
-    e.preventDefault()
-    setFormStatus('Submitting...')
-    const { name, email, message } = e.target.elements
-    let conFom = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    }
-    console.log(conFom)
-  }
+function DestinationPage() {
   return (
-    <div className="container mt-5">
-      <h2 className="mb-3">Contact Me</h2>
-      <form onSubmit={onSubmit}>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="name">
-            Name
-          </label>
-          <input className="form-control" type="text" id="name" required />
-        </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="email">
-            Email
-          </label>
-          <input className="form-control" type="email" id="email" required />
-        </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="message">
-            Message
-          </label>
-          <textarea className="form-control" id="message" required />
-        </div>
-        <button className="btn btn-danger" type="submit">
-          {formStatus}
-        </button>
-      </form>
-    </div>
-  )
+    <ChakraProvider>
+<VStack spacing={7} paddingTop={5}>
+<Heading size='xl' >Destinations</Heading>
+<Text>Where do you want to go?</Text>
+</VStack>
+</ChakraProvider>
+  );
 }
 export default DestinationPage
