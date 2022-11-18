@@ -33,6 +33,14 @@ function AboutUsPage() {
             <Stack divider={<StackDivider />} spacing="4">
               <Box>
                 <Heading size="xs" textTransform="uppercase">
+                  Our Top 5
+                </Heading>
+                <Text pt="2" fontSize="sm">
+                  Our top 5 places!
+                </Text>
+              </Box>
+              <Box>
+                <Heading size="xs" textTransform="uppercase">
                   Cindy
                 </Heading>
                 <Text pt="2" fontSize="sm">
