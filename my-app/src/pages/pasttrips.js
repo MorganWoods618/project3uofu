@@ -11,7 +11,6 @@ import {
   Image
 } from '@chakra-ui/react';
 
-
 function PastTripsPage() {
     return (
       <ChakraProvider>

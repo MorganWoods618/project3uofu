@@ -10,6 +10,7 @@ import SignupPage from "./pages/signup";
 import Footer from "./components/layout/Footer";
 import ContactPage from "./pages/contact";
 
+
 function App() {
   return (
     <Layout>
