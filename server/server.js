@@ -1,6 +1,6 @@
 const path = require("path");
 const routes = require("./routes/api");
-const { db,app} = require('./config');
+const { app} = require('./config');
 
 
 app.use(routes);
