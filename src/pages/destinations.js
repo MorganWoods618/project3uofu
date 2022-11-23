@@ -18,6 +18,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 
+// API call setup
 import API from "../utils/API"
 function DestinationPage() {
     useEffect(()=>{
