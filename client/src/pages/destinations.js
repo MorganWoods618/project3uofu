@@ -1,4 +1,3 @@
-
 // import {
 //   Editable,
 //   EditableInput,
@@ -25,7 +24,6 @@
 // // API call setup
 // import API from "../utils/API"
 // import locationAPI from "../utils/localStorage";
-
 
 // const SearchLocation = () => {
 //   // create state for holding returned google api data
@@ -229,9 +227,6 @@
 // };
 // export default SearchLocation
 
-
-
-    
 import {
   Editable,
   EditableInput,
@@ -251,32 +246,39 @@ import {
   ChakraProvider,
   Box,
   FormControl,
-  useControllableProp, 
-  useControllableState
+  useControllableProp,
+  useControllableState,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 
 // API call setup
-import API from "../utils/API"
+import API from "../utils/API";
 
 function DestinationPage() {
-    useEffect(()=>{
-      API.destinations().then((response)=> {
-        console.log(response.data)
-      }  
-    )})
+  useEffect(() => {
+    API.destinations().then((response) => {
+      console.log(response.data);
+    });
+  });
 
   return (
-      <ChakraProvider>
-        <Center py={6}>
-          <HStack>
-        <Input placeholder='Where do you want to go?' size='lg' align='center' />
-        <Button size='lg'>Search</Button>
-        </HStack>
-  </Center>
-  </ChakraProvider>
-    );
-  };
+    <ChakraProvider>
+      <Center py={6}>
+        <Heading>Find Somewhere To Go!</Heading>
+      </Center>
+      <Center>
+        <Box
+          maxW={"445px"}
+          w={"full"}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          p={6}
+          overflow={"hidden"}
+        ></Box>
+      </Center>
+    </ChakraProvider>
+  );
+}
 
 // export default DestinationPage
 //     <ChakraProvider>
@@ -288,4 +290,4 @@ function DestinationPage() {
 // </ChakraProvider>
 //   );
 // }
-export default DestinationPage
+export default DestinationPage;

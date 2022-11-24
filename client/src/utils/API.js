@@ -10,15 +10,15 @@ export default {
 
 
    // To get tourest locations
-      const options = {
-         method: 'GET',
-         url: 'https://opentripmap-places-v1.p.rapidapi.com/en/places/geoname',
-         params: {name: 'London'},
-         headers: {
-           'X-RapidAPI-Key': '2b2d262296msh6a27b9e5fb577fap172651jsn21e262119317',
-           'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
-         }
-       };
+   const options = {
+      method: 'GET',
+      url: 'https://opentripmap-places-v1.p.rapidapi.com/en/places/radius',
+      params: {radius: '500', lon: '38.364285', lat: '59.855685'},
+      headers: {
+        'X-RapidAPI-Key': '2b2d262296msh6a27b9e5fb577fap172651jsn21e262119317',
+        'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
+      }
+    };
        
        return axios.request(options);
     

@@ -1,20 +1,24 @@
 import {
   Center,
-  VStack,
-  Heading,
-  Tabs,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
   ChakraProvider,
   HStack,
   Input,
   Button,
 } from "@chakra-ui/react";
 
+
+import { useEffect } from "react";
+
+// API call setup
+import locationAPI from "../../utils/locationAPI";
+
 function SearchBar() {
-  return (
+  useEffect(() => {
+    locationAPI.locations().then((response) => {
+      console.log(response.data);
+    });
+  });
+  return(
     <ChakraProvider>
       <Center bg="grey" padding={4}>
         <HStack>
@@ -23,8 +27,10 @@ function SearchBar() {
             size="sm"
             align="center"
             bg="white"
+            rounded='md'
           />
           <Button size="sm">Search</Button>
+          
         </HStack>
       </Center>
     </ChakraProvider>
