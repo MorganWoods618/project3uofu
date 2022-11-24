@@ -9,15 +9,18 @@ export default {
    destinations: function() {
       const options = {
          method: 'GET',
-         url: 'https://andruxnet-world-cities-v1.p.rapidapi.com/',
+         url: 'https://api.opentripmap.com/0.1/en/places/',
          params: {query: 'paris', searchby: 'city'},
          headers: {
-           'X-RapidAPI-Key': 'bcee7348afmshb2a2bb64c60a5ebp11f6bbjsn4d7b7ce455d6',
-           'X-RapidAPI-Host': 'andruxnet-world-cities-v1.p.rapidapi.com'
+            'X-RapidAPI-Key': '5ae2e3f221c38a28845f05b63a5ba8d1e3432752bdf540933f8abbd3 ',
+            'X-RapidAPI-Host': 'countries-cities.p.rapidapi.com'
          }
        };
        
        return axios.request(options);
+
+       console.log(response.data);
+
     
    },
    

@@ -31,7 +31,8 @@ function DestinationPage() {
     <ChakraProvider>
 <VStack spacing={7} paddingTop={5}>
 <Heading size='xl' >Destinations</Heading>
-<Text>Where do you want to go?</Text>
+<Input placeholder='Where do you want to go?' size='lg' />
+
 </VStack>
 </ChakraProvider>
   );
