@@ -15,41 +15,25 @@ import {
   Badge,
   UseToast,
   ChakraProvider,
-  Box,
-  FormControl,
-  useControllableProp,
-  useControllableState,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 
 // API call setup
-import API from "../utils/API";
-
+import API from "../utils/API"
 function DestinationPage() {
-  useEffect(() => {
-    API.destinations().then((response) => {
-      console.log(response.data);
-    });
-  });
+    useEffect(()=>{
+      API.destinations().then((response)=> {
+        console.log(response.data)
+      }  
+    )})
 
   return (
     <ChakraProvider>
-      <Center py={6}>
-        <Heading>Find Somewhere To Go!</Heading>
-      </Center>
-      <Center>
-        <Box
-          maxW={"445px"}
-          w={"full"}
-          boxShadow={"2xl"}
-          rounded={"md"}
-          p={6}
-          overflow={"hidden"}
-        ></Box>
-      </Center>
-    </ChakraProvider>
+<VStack spacing={7} paddingTop={5}>
+<Heading size='xl' >Destinations</Heading>
+<Text>Where do you want to go?</Text>
+</VStack>
+</ChakraProvider>
   );
 }
-
-
-export default DestinationPage;
+export default DestinationPage

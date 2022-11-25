@@ -9,18 +9,14 @@ import {
   TabPanel,
   TabPanels,
   ChakraProvider,
-  HStack,
-  Input,
-  Button
 } from "@chakra-ui/react";
-import SearchBar from "./SearchBar";
 
 // import classes from './MainNavigation.module.css';
 
 function MainNavigation() {
   return (
     <ChakraProvider>
-      <Center bg="black" padding={6}>
+      <Center bg="black" color="white" padding={8}>
         <VStack spacing={7}>
           <Tabs variant="soft-rounded" colorScheme="red">
             <Center>
@@ -48,9 +44,30 @@ function MainNavigation() {
           </Tabs>
         </VStack>
       </Center>
-      <SearchBar/>
     </ChakraProvider>
   );
 }
 
 export default MainNavigation;
+
+{
+  /* <header>
+<nav>
+  <ul>
+    <li>
+      <Link to="/">Dashboard</Link>
+    </li>
+    <li>
+    <Link to="/aboutus">About Us</Link>
+    </li>
+    <li>
+    <Link to="/destinations">Destinations</Link>
+    </li>
+    <li>
+    <Link to="/pasttrips">Past Trips</Link>
+    </li>
+  </ul>
+  
+</nav>
+</header> */
+}
