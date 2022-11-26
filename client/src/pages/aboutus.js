@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Center,
@@ -8,61 +8,73 @@ import {
   Avatar,
   useColorModeValue,
   ChakraProvider,
-  Image
-} from '@chakra-ui/react';
+  Image,
+} from "@chakra-ui/react";
 
 function AboutUsPage() {
-    return (
-      <ChakraProvider>
-        <Heading size='2xl' align='center'>About Us</Heading>
-    <Center py={6}>
-      <Box
-        maxW={'445px'}
-        w={'full'}
-        bg={useColorModeValue('white', 'gray.900')}
-        boxShadow={'2xl'}
-        rounded={'md'}
-        p={6}
-        overflow={'hidden'}>
-
-        <Stack>
-        <Image
-            src={
-              'https://lh3.googleusercontent.com/pw/AL9nZEVTr7UCZcmYAlw2851bbIItjcqriYQoJ6LEWZQuE1c_qdXztpOlrMC40Adau6-OL4Au35w0bhCXH5S7AGGfW-Tbq28kOOEZGS_ZaeyaRDmA4D4hqeZM5ZuBtX8PBd4cHd2tTjxNe-kmB5PbVjvbPXhh-HHM4QA4OSbyf4PSQIJBBQNS2QazGwMroiTpZCcxOO5rXpoIZ9I_T5unhs18RG87nx48RL8OTSAvuL_ywaCpyO1L0mbu0ybjUceXVsNSk1yQjzcQ_BDaKvA-twpQijnvVR00_2_1vLmy7dEfa-KJIj9vBH_6qrjQuZMWbb2t9c1WEXhxA63YYSOTNBWZPAbsT1YCyFj5JrZUPpmd1F65ABwEI9WwYMiQ-HUuu1nTrDhGzVyaeTZZvdnj5Dckdw0eNV7LL7098NOKP3pXLrVfNKEO-_FCX0o4ynRsxzz4w0nhkxE7fhuuaZssAl6ZXhRNStEqe8j1LYb6tCvYKLSiepHatwv2Df5AEtC55EDcmP7gZNLN-nuL8QQHQv43FaIttSuj2YN30bXTzjAoGy_CFx24xx-qjIQMewEPdL96Ek7TWUQtCoXtNvYx-eyZ8jDW3LjYVCC1gu_VZO2k73frnwjY9YPbyGH0EUqNKU7uqGDRq6gnJUfKKJO6SYYZgngmYsQRUKFYsJEgbdWAO42JUy-34i4B7-CxzWuB8M7eGI5PRNo61zxSUnIyI6qqxqUiyWB6qvTVVs3Kw5C3FIK_8yZvfWAPsl5vrKbJKbZN0mpY7cv2hbuDQNbHdvpRkXhNl-DUoHgZY0h2ePTjw1kYUG1ni0zJZ0zeeUT3DEXy-D_VAAP5fwbWONm_n0-hRRi3e_Lw2C2sTSxd9zM0f1Rj6Yo2tnx8hqdKMVgeCagOv_CTbwSb61h4nr2hQ7t-FQBHOGU-qHynsr-5CJHw75I0nHTGnYaKz--NP6AmaVp4b1HnYn8cvuiRcgShm3JjiR9-mCV6IHX-Aqx2f9pou0lebKPnOR2Z1SGiXkEXdJbtwlntKneWuumn_2DDZfAJXKKEd14P9MQVEZz5M_9kCt6SGD9kMLvmZ7CFWulAvFdh0t_pzGRI=w866-h965-no?authuser=0'
-            }
-            layout={'fill'}
-          />
-          <Text
-            color={'green.500'}
-            textTransform={'uppercase'}
-            fontWeight={800}
-            fontSize={'sm'}
-            letterSpacing={1.1}>
-          </Text>
-          <Heading
-            color={useColorModeValue('gray.700', 'white')}
-            fontSize={'2xl'}
-            fontFamily={'body'}>
-Costa Rica Manuel Antonio National Rain Forrest
-          </Heading>
-          <Text color={'gray.500'}>
-          "I just love Costa Rica!  Myself and a companion traveled there to the Pacific side and it was just amazing!  The Beautiful Manuel Antonio National Rain Forrest was to die for.  There were monkeys, sloths, rain Forrest black crabs, iguana's and other strange creatures.  It was just breath taking!  We also enjoyed the wonderful coffee, they have amazing coffee plantations.  The food was delicious and so much yummy fruits!  The local's are so warm and welcoming.  There is some much outdoor activities to do there as well."
-          </Text>
-        </Stack>
-        <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
-          <Avatar
-            src={'https://lh3.googleusercontent.com/pw/AL9nZEUaoROVor3nUNo2m7wQPonUPzWN8-tgbNas77o4uvOIFJy-Y5tuv84mEsniAkEjj8UJBmv4P_Vo4xRAssAvjZ3PsIS8RqX8Q8KhVD0v5zC1lO7ULSot6sqxw98ZG6OuPB0eP5su3fq2ckka3KLhzEv65lL24srCbqpb_wpVSncmevvkUsOPv18Lw5_ceE5Isze4Y4N1oRbEz8fPtL9StqmJMsaiGUXcTW_J3ichiiMqsRjmZh0iOKLfHC0fPVCvY6M0UadWu6bLepMqiqctPEYLGrWlEoiyWJPJVqEYPOCIUEWuDSNCo1YBEsHVSwCptMYFbbJR03W_N-puIdCPTgpYBjU8MWI4lUo9lz8tVEnh_b12gotDNS9XNE8JpdkA81Nabyei-oYko1K8E7hDbCgpCVWRQVCYcabo-ol21YKwyoYjkp3i4bILpgZzQvP0PwrliJUHqi6CUpoFh13cESobIrlb1i4cr3Zthm2qVAY-99vV8cgkpr26_M6Bno-HjGqAISa3eIjwGFqKzwBQ5dWG66N1RSd8VHQp6jnUX2mijXfVIOMjVOiUE1iAH7HIVPX-tp5WajozaDffYRSBK9UpMhInQHqZoePuZVskEAf3w5-dXPUhxCgfSxOKjrOa1iBfDexYGZa5yI6MeUo8-DDiU9jXtDSvQ8uRhHhqZirD6QNdcW7i1a-GWVsN6Y3KwbJFos1T3df8HzEmp1GT-Q7aCOunSMBbSP7ggouD5AIQKfre0Bj3JjMBmfr-f_Nwc9RRp9MM_6Mck5wFavdlQc-t_-fnr611NGYlb0JmADNkhidxBDUxIUDAsr2g2dx72YxH8h3s1WoxAk1HQ296_uFYvBEbJ0m0kCjNaLJbyqx6SIjW-d3_n_UFPcHv_x3ecinLblhvuF2_-Ixwsx4a5UPNwP5PCKacJJtOwfvP7DD7pbi_61NIDGbUjD4ozwhc3ppUIKkU5BhwZKHwwR0ZVl0qBrIO6-W2mPDD70yIDGDtyBoEZW_at03hlDu3TZ0oTka2CUntNt-A9-MRwn2rVfX5vYkJiGutr9Qis5TknJvsOldAJcTrAAEaXRAz7JFUWFDO1lxP=w365-h327-no?authuser=0'}
-            alt={'Author'}
-          />
-          <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text fontWeight={600}>Cindy Chynoweth</Text>
+  return (
+    <ChakraProvider>
+      <Heading size="2xl" align="center">
+        About Us
+      </Heading>
+      <Center py={6}>
+        <Box
+          maxW={"445px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.900")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          p={6}
+          overflow={"hidden"}
+        >
+          <Stack>
+            <Image
+              src={
+                "https://lh3.googleusercontent.com/pw/AL9nZEVzm111tA91CXUDBvexaU4K3LDeG_7y8TEuEwRe9qVIOxvrWcjx3edQ3s9kyjE-QVSPKw-fnGdsu75TieDp8_xqhA5Z2jmDDQ4zwu-LFufVXxNJJlvUF7nukxScRiYhFqjSzR4Zs2u9WZghNcostcAHx8jVoxrbgHQYQhvtfMrmex0rV1umkpAPQiy8KvTQSVKJ3YE0t8ICAdkpBsDe-AEoSNK1q_IaLyMx-rbjc7PYBuuGELMTKDu-BpQ5ed8xfQaaAL28TVf07fdo4l5KA8QVuwDX8X-skUSgCOJtBQ_ypGFEY5re3utv-6D0fV9ou0wHM50neRQZZlehJFABd2d24yFMYMwWMjDxCeE_sBSirR57JdRPGUoae7x9acXLs5IxpP83vkb4DJgSr7giHTdKlDwus0vkS3S13iMg0pPHjkbAtPbnLa4CBwhEg7l5dFMWIx0Hfh11gG4yhIbuHz-L4u4saBeAazStcm_vnuoWpPoWkh9eeR5IPyam7m2YUh_F6cje2RcUxM_7vuQwfuOyS8HSvdEu9W0mfMgQ0JcCcv6WTfCbw7387JsfgtjrEfU5-Ox3u9ZT8hEKN9ES-piFHBraFDsT34DjDmCwJWsZFJZOnALxj1VR9zBAEc_w3gBKO5oENLHdSMNb3LWvxslRQLeVorL8Vmja3MiqlsXJUejIOQaZNbWQmO52tQaJZ0tInTDE2n8UrTcpJ3HQMtFBHMCElYYBSyfQW6tpGs_i4-YReUtAbHJPcMUr0GrgKUhClPtrDnDutXbNeVcpewPYbcV-xR_XHseryTAe6ZcqO_Hp9zgedpCbFjdP3W9LsBMWElBBSbjc3rARTs2HPAxTGWV3RG3CPNuPVT-n1Pt-ozJiTRW0Nv6aoK_Vr4sd3MdlCOvZWXnrJTzuAWIusGh-36lK5sJ7wqiVoPVnGaJH--rEJLsOa5IdjJINZgiqX1SX9FjLTvz0iUR8O-3gyCWb_tKRuirn0DwrZnrgTqPsNrlYatFgup1Drku2jYLZwC6z9s_ZFvaJu6GN-R04T8WuRvHzsPJdN32M7Pno6AOZu_MvylrZGN7sDT8Wn0-bM0_0IjDy=w866-h965-no?authuser=0"
+              }
+              layout={"fill"}
+            />
+            <Text
+              color={"green.500"}
+              textTransform={"uppercase"}
+              fontWeight={800}
+              fontSize={"sm"}
+              letterSpacing={1.1}
+            ></Text>
+            <Heading
+              color={useColorModeValue("gray.700", "white")}
+              fontSize={"2xl"}
+              fontFamily={"body"}
+            >
+              Costa Rica Manuel Antonio National Rain Forrest
+            </Heading>
+            <Text color={"gray.500"}>
+              "I just love Costa Rica! Myself and a companion traveled there to
+              the Pacific side and it was just amazing! The Beautiful Manuel
+              Antonio National Rain Forrest was to die for. There were monkeys,
+              sloths, rain Forrest black crabs, iguana's and other strange
+              creatures. It was just breath taking! We also enjoyed the
+              wonderful coffee, they have amazing coffee plantations. The food
+              was delicious and so much yummy fruits! The local's are so warm
+              and welcoming. There is some much outdoor activities to do there
+              as well."
+            </Text>
           </Stack>
-        </Stack>
-      </Box>
-    </Center>
- </ChakraProvider>
-    );
-  }
-
+          <Stack mt={6} direction={"row"} spacing={4} align={"center"}>
+            <Avatar
+              src={
+                "https://lh3.googleusercontent.com/pw/AL9nZEWKrx-LsQH_i24QbiNODsI_987tozazym44Qr5kJ5FuWn_Ey_S17YUB9bGkcfUSL4yuLoDxKmgOlHibgC0LRa3bxnYiUXIa02H_CjHHz3BZ5RWbuyIK4K1u718v8xmFEjldSs9jBkFgQ7FS6oBK6_pCvHVQrer3w4ttXOtAcEGoTRSnpo8F1YjFGLebdSfURIluOMimcqaU9gI_eL_HArszhyWN48tWaz9Rgaz4Hls1XG4WirvcY5sk1MahaWsUhF5LrVRbKs2HABClye2BtJWun_amIS5Psyzq6kSNIiO6VYuVVPkfgvB8xkh1Ip7_56b0b_sy4EP-ot8MIMjmb9TiTzkE6OXg3VHXmpctr7IcWJq0CJwaOhxpuKxjp2gX4QuCB8lUXGQtqUy4LUlj4cZILORw1lwdqQjtq0HMTH0nT_eY0C6S1i0_XcerP28JbCBDxJXXFDu9onYSxYKQu_qq0ZAZFmdhZtwqFBnZlnDZ_nBU79kpVVG19bbJb18JtNa0xiNqpzTe8hN-a0YXIpXAepFhhfopZMaFXk1boYmcK3l-Hr3m54FQPWo3OaMD7WmANJhtxaj-t875ACvcv3HXp25gXMdXDoOxptKtYf7oJYSbykPGMASYQo9fHyPpG4ymNaMDqoC9DhFYwowo8fIedr_zLrkxuvIzVN5lrup5ImT1qvQxOJp1O57zGL4pbXoFwgpG534G-Psi5CdIg6hT0tupKjo2iEZLDJ7nh0vpyrf3hEOMzHnzJ0wFHV13W-5pTTF_WrJC9vIPLOXDYqpWRHZdCorJyOjpuz-DF0vt0YHSbsfRWqgwyujNOHlXQajamJCZBON32ngYciGsuIwCQQ00NLMk3p5IUDvpTrjIFmjNHxfeVYlYjjXyWYcvmYFaNb16Oc496k3NtGpbRhYmRdXVxdbugougNppKQ7sz_TMN0PpBXwOsrn3TJ_1wBNL9RHxR3wI2XdHd7Nt3bqRkKHOW1nFeOaDMYsmQu8VcdnOzh5ur09pxy6M1ykDuKqcb1Av0BqMFEqdZer_QWbbw0vl_rKGPz9q7hlA5tn2eksnRavyZb2lKROoWThy6m7Qn1jek=w365-h327-no?authuser=0"
+              }
+              alt={"Author"}
+            />
+            <Stack direction={"column"} spacing={0} fontSize={"sm"}>
+              <Text fontWeight={600}>Cindy Chynoweth</Text>
+            </Stack>
+          </Stack>
+        </Box>
+      </Center>
+    </ChakraProvider>
+  );
+}
 
 export default AboutUsPage;

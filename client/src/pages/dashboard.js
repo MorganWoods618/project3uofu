@@ -24,6 +24,7 @@ import {
   TabPanels,
   TabPanel,
 } from "@chakra-ui/react";
+import DashCalendar from "./Calendar";
 
 function DashboardPage() {
   return (
@@ -43,7 +44,7 @@ function DashboardPage() {
               <p>Favorites</p>
             </TabPanel>
             <TabPanel>
-              <p>Calendar</p>
+              <DashCalendar/>
             </TabPanel>
           </TabPanels>
         </Tabs>

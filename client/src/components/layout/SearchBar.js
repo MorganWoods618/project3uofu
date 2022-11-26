@@ -4,6 +4,7 @@ import {
   HStack,
   Input,
   Button,
+  Text,
 } from "@chakra-ui/react";
 
 
@@ -30,7 +31,6 @@ function SearchBar() {
             rounded='md'
           />
           <Button size="sm">Search</Button>
-          
         </HStack>
       </Center>
     </ChakraProvider>
