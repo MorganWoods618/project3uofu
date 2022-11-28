@@ -2,11 +2,11 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var LoginSchema = new Schema({
-  loginname: {
+  username: {
     type: String,
     trim: true,
     required: "Loginname is required.",
-    unique: true
+    unique: true,
   },
   password: {
     type: String,
@@ -16,25 +16,28 @@ var LoginSchema = new Schema({
       function (input) {
         return input.length >= 6;
       },
-      "Password should be at least 6 characters long."
-    ]
+      "Password should be at least 6 characters long.",
+    ],
   },
   loginCreated: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   email: {
     type: String,
     index: {
       unique: true,
-      partialFilterExpression: {email: {$type:"string"}}
+      partialFilterExpression: { email: { $type: "string" } },
     },
-    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
   },
-  trip: [{
-    type: Schema.Types.ObjectId,
-    ref: "Trip"
-}]
+  trip: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Trip",
+    },
+  ],
 });
 
-var Login = mongoose.model("Login", LoginSchema);
+var User = mongoose.model("User", LoginSchema);
+module.exports = User;

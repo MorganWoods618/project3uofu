@@ -1,5 +1,8 @@
+const User = require("./user")
+const Trip = require("./pasttrips")
+const Destinations = require("./destinations")
+
 module.exports = {
-    Destinations: require("./destinaions"),
-    Login: require("./login")
+    User,Trip,Destinations,
     // Events: require('./events')
 }

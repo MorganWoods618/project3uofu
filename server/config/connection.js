@@ -6,6 +6,7 @@ const connectionString =
 connect(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  //Be on look out for errors 8,9 in configs varibles.
   useCreateIndex: true,
   useFindAndModify: false,
 });
