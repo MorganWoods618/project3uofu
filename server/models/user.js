@@ -1,6 +1,7 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
+// User was used instead of login to make it more uniform.
 var LoginSchema = new Schema({
   username: {
     type: String,
