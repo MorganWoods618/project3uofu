@@ -1,5 +1,5 @@
 const { gql } = require("apollo-server-express");
-
+// Type defs are connecting to the files in models. They are running in graphQL, having issues deploying to frontend.
 const typeDefs = gql`
   type User {
     _id: ID!
@@ -8,6 +8,7 @@ const typeDefs = gql`
     password: String
     trip: [Trip]
   }
+
   type Trip {
     tripId: ID!
     title: String
@@ -16,6 +17,7 @@ const typeDefs = gql`
     guests: [User]
     allDay: Boolean
   }
+
   type Destinations {
     title: String
     destinations: String
@@ -23,6 +25,7 @@ const typeDefs = gql`
     guests: [User]
     allDay: Boolean
   }
+
   type Auth {
     token: ID!
     user: User
