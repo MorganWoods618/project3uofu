@@ -1,28 +1,8 @@
 import {
-    Stack,
-    StackDivider,
-    Box,
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
     ChakraProvider,
     Center,
     Text,
     Heading,
-    VStack,
-    Button,
-    Input,
-    HStack,
-    SimpleGrid,
-    Image,
-    Badge,
-    UseToast,
-    Tab,
-    Tabs,
-    TabList,
-    TabPanels,
-    TabPanel,
   } from "@chakra-ui/react";
 
 import {useState} from 'react';

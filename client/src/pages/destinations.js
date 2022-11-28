@@ -13,6 +13,7 @@ import { useEffect } from "react";
 
 // API call setup
 import API from "../utils/API";
+import locationAPI from '../utils/locationAPI';
 
 function DestinationPage() {
   useEffect(() => {
@@ -54,7 +55,7 @@ function DestinationPage() {
               color={useColorModeValue("gray.700", "white")}
               fontSize={"2xl"}
               fontFamily={"body"}
-            >Destination Name            </Heading>
+            >           </Heading>
             <Text color={"gray.500"}>
             Description
             </Text>
