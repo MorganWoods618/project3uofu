@@ -6,14 +6,14 @@ export default {
    // Authentication methods
    // ===============================================
 
-   destinations: function() {
+   destinations: function(lat, lon) {
 
 
-   // To get tourest locations
+   // To get lat and lon
    const options = {
       method: 'GET',
       url: 'https://opentripmap-places-v1.p.rapidapi.com/en/places/radius',
-      params: {radius: '500', lon: '38.364285', lat: '59.855685'},
+      params: {radius: '500', lon: `${lon}`, lat: `${lat}`},
       headers: {
         'X-RapidAPI-Key': '2b2d262296msh6a27b9e5fb577fap172651jsn21e262119317',
         'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'

@@ -6,14 +6,14 @@ export default {
    // Authentication methods
    // ===============================================
 
-   locations: function() {
+   locations: function(cityValue) {
 
 
-   // To get tourest locations
+   // To get XID
       const options = {
          method: 'GET',
          url: 'https://opentripmap-places-v1.p.rapidapi.com/en/places/geoname',
-         params: {name: 'London'},
+         params: {name: `${cityValue}`},
          headers: {
            'X-RapidAPI-Key': '2b2d262296msh6a27b9e5fb577fap172651jsn21e262119317',
            'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
@@ -23,7 +23,6 @@ export default {
        return axios.request(options);
     
    },
-   
 
    Dashboard: function(id){
       return axios.post("/api/dashboard");
