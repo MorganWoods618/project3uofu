@@ -6,15 +6,13 @@ export default {
    // Authentication methods
    // ===============================================
 
-   locationDetails: function() {
+   locationDetails: function(xid) {
 
 
    // To get location details
       const options = {
          method: 'GET',
-         url: 'https://opentripmap-places-v1.p.rapidapi.com/en/places/xid/' + 'N1834370406',
-        //  params: {xid: N1834370406},
-        // //  ${locationDetails}`
+         url: 'https://opentripmap-places-v1.p.rapidapi.com/en/places/xid/' + `${xid}`,
          headers: {
            'X-RapidAPI-Key': '2b2d262296msh6a27b9e5fb577fap172651jsn21e262119317',
            'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'

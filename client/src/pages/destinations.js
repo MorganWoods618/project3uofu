@@ -9,18 +9,54 @@ import {
   Image,
   Button
 } from '@chakra-ui/react';
-import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
+import SearchBar from '../components/layout/SearchBar';
 // API call setup
 import locationdetailsAPI from '../utils/locationdetailsAPI';
 
 function DestinationPage() {
   useEffect(() => {
     locationdetailsAPI.locationDetails().then((response) => {
-      console.log(response.data);
+      console.log(response.data.address);
     });
   });
+    const [searchInput, setSearchInput] = useState("")
+    const [searchedLocation, setSearchLocation] = useState([])
+  
+    // checking locationdetailsapi works
+    // useEffect(() => {
+    //   locationdetailsAPI.locations("London").then((response) => {
+    //     console.log(response.data);
+    //   });
+    // });
+  
+    const handleInputChange = (event) => setSearchInput(event.target.value)
+    const handleSubmit = async(event)=>{
+      event.preventDefault()
+      // console.log(searchInput)
+      try{
+        const response = await locationdetailsAPI.locationDetails(searchInput)
+        API.destinations(response.xid).then(data=>{
+          // const cityReturn= data.data.features
+          // const searchData= cityReturn.map(city=>(
+          //   {
+          //   //need to pull XID
+          //   xidNumber: cityReturn.data
+          // }
+          // ))
+  
+          //pulling all XIDs in an array
+          // const xidArray = []
+          data.address.forEach(feature => {
+            locationdetailsAPI.push(feature.city)
+          });
+          console.log(locationdetailsAPI)
+        })
+      }catch(err){
+        console.log(err)
+      }
 
+      }
   return (
     <ChakraProvider>
       <Heading size="2xl" align="center">

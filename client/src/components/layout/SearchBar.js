@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 // API call setup
 import locationAPI from "../../utils/locationAPI";
 import API from "../../utils/API";
+import locationdetailsAPI from "../../utils/locationdetailsAPI";
 
 function SearchBar() {
   const [searchInput, setSearchInput] = useState("")
@@ -27,10 +28,9 @@ function SearchBar() {
   const handleInputChange = (event) => setSearchInput(event.target.value)
   const handleSubmit = async(event)=>{
     event.preventDefault()
-    console.log(searchInput)
+    // console.log(searchInput)
     try{
       const response = await locationAPI.locations(searchInput)
-      console.log(response.data.lat)
       API.destinations(response.data.lat, response.data.lon).then(data=>{
         // const cityReturn= data.data.features
         // const searchData= cityReturn.map(city=>(
@@ -50,7 +50,28 @@ function SearchBar() {
     }catch(err){
       console.log(err)
     }
-  }
+    
+    // //attempting to pull location details
+    // const xidResponse = await locationdetailsAPI.locationDetails(searchXID)
+    //   console.log(xidResponse.data.xid)
+    //   locationdetailsAPI.locationDetails(xidResponse.data.xid).then(data=>{
+    //     // const cityReturn= data.data.features
+    //     // const searchData= cityReturn.map(city=>(
+    //     //   {
+    //     //   //need to pull XID
+    //     //   xidNumber: cityReturn.data
+    //     // }
+    //     // ))
+
+    //     //pulling all XIDs in an array
+    //     const locationDetailsArray = []
+    //     data.data.features.forEach(feature => {
+    //       locationDetailsArray.push(feature.properties.xid)
+    //     });
+    //     console.log(locationDetailsArray)
+    //   })
+    }
+  
   
   return(
     <ChakraProvider>
