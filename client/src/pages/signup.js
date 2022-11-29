@@ -30,11 +30,11 @@ export default function SignupPage() {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      // const { data } = await addUser({
-      //   variables: { ...userFormData },
-      // });
+      const { data } = await addUser({
+        variables: { ...userFormData },
+      });
       console.log(data);
-      // Auth.login(data.addUser.token);
+      Auth.login(data.addUser.token);
     } catch (err) {
       console.error(err);
     }
@@ -44,7 +44,7 @@ export default function SignupPage() {
       password: "",
     });
   };
-
+  console.log(userFormData);
   return (
     <ChakraProvider>
       <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
@@ -54,15 +54,30 @@ export default function SignupPage() {
               <Heading fontSize={"2xl"}>Sign up</Heading>
               <FormControl id="name">
                 <FormLabel>Username</FormLabel>
-                <Input type="name" />
+                <Input
+                  name="username"
+                  onChange={handleInputChange}
+                  value={userFormData.username}
+                  type="name"
+                />
               </FormControl>
               <FormControl id="username">
                 <FormLabel>Email address</FormLabel>
-                <Input type="email" />
+                <Input
+                  name="email"
+                  onChange={handleInputChange}
+                  value={userFormData.email}
+                  type="email"
+                />
               </FormControl>
               <FormControl id="password">
                 <FormLabel>Password</FormLabel>
-                <Input type="password" />
+                <Input
+                  name="password"
+                  onChange={handleInputChange}
+                  value={userFormData.password}
+                  type="password"
+                />
               </FormControl>
               <Stack spacing={6}>
                 <Stack
