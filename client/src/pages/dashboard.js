@@ -1,29 +1,13 @@
 import {
-  Stack,
-  StackDivider,
-  Box,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
   ChakraProvider,
-  Center,
-  Text,
-  Heading,
   VStack,
-  Button,
-  Input,
-  HStack,
-  SimpleGrid,
-  Image,
-  Badge,
-  UseToast,
   Tab,
   Tabs,
   TabList,
   TabPanels,
   TabPanel,
 } from "@chakra-ui/react";
+import DashCalendar from "./Calendar";
 
 function DashboardPage() {
   return (
@@ -43,7 +27,7 @@ function DashboardPage() {
               <p>Favorites</p>
             </TabPanel>
             <TabPanel>
-              <p>Calendar</p>
+              <DashCalendar/>
             </TabPanel>
           </TabPanels>
         </Tabs>
