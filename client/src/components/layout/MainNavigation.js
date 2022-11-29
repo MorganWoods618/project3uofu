@@ -48,7 +48,7 @@ function MainNavigation() {
           </Tabs>
         </VStack>
       </Center>
-      <SearchBar/>
+      {/* <SearchBar/> */}
     </ChakraProvider>
   );
 }
