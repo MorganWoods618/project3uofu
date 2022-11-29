@@ -15,19 +15,19 @@ function DashboardPage() {
       <VStack spacing={7} paddingTop={5}>
         <Tabs isFitted variant="enclosed">
           <TabList>
+            <Tab>Calendar</Tab>
             <Tab>Upcoming Trips</Tab>
             <Tab>Favorites</Tab>
-            <Tab>Calendar</Tab>
           </TabList>
           <TabPanels>
+            <TabPanel>
+              <DashCalendar />
+            </TabPanel>
             <TabPanel>
               <p>Upcoming Trips</p>
             </TabPanel>
             <TabPanel>
               <p>Favorites</p>
-            </TabPanel>
-            <TabPanel>
-              <DashCalendar/>
             </TabPanel>
           </TabPanels>
         </Tabs>
