@@ -6,15 +6,25 @@ import {
   TabList,
   TabPanels,
   TabPanel,
+  Flex,
+  Image,
+  HStack,
+  Text,
+  Heading,
+  Center
 } from "@chakra-ui/react";
 import DashCalendar from "./Calendar";
 
 function DashboardPage() {
   return (
     <ChakraProvider>
-      <VStack spacing={7} paddingTop={5}>
+      <VStack spacing={7} paddingTop={5}
+      backgroundImage="https://images.unsplash.com/photo-1589519160732-57fc498494f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat">
+      >
         <Tabs isFitted variant="enclosed">
-          <TabList>
+          <TabList color='white'>
             <Tab>Calendar</Tab>
             <Tab>Upcoming Trips</Tab>
             <Tab>Favorites</Tab>
@@ -31,7 +41,17 @@ function DashboardPage() {
             </TabPanel>
           </TabPanels>
         </Tabs>
-      </VStack>
+        <Heading color='white'>
+          Our Top Locations to Visit!
+        </Heading>
+        <Text color='white'>Cindy's Spots! </Text>
+        <Text color='white'>Locations: </Text>
+        <Text color='white'>Luna's Spots! </Text>
+        <Text color='white'>Locations: </Text>
+        <Text color='white'>Morgan's Spots! </Text>
+        <Text color='white'>Locations: </Text>
+        <Text></Text>
+        </VStack>
     </ChakraProvider>
   );
 }
