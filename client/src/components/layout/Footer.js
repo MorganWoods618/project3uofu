@@ -17,33 +17,12 @@ const Footer = () => (
       <Stack spacing={{ base: "4", md: "5" }}>
         <Stack justify="space-between" direction="row">
           //add logo here
-          <ButtonGroup variant="ghost">
-            <IconButton
-              as="a"
-              href="#"
-              aria-label="LinkedIn"
-              icon={<FaLinkedin fontSize="1.25rem" />}
-            />
-            <IconButton
-              as="a"
-              href="#"
-              aria-label="GitHub"
-              icon={<FaGithub fontSize="1.25rem" />}
-            />
-            <IconButton
-              as="a"
-              href="#"
-              aria-label="Twitter"
-              icon={<FaTwitter fontSize="1.25rem" />}
-            />
             <Button
               rightIcon={<FaArrowRight />}
               colorScheme="teal"
-              variant="outline"
-            >
+              variant="outline">
                                 <Link to="/contact">Contact Us</Link>
             </Button>
-          </ButtonGroup>
         </Stack>
         <Text fontSize="sm" color="subtle">
           &copy; {new Date().getFullYear()} Group 10 Project 3
