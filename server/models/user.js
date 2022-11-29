@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
-
+var bcrypt = require("bcrypt");
 // User was used instead of login to make it more uniform.
 var LoginSchema = new Schema({
   username: {
@@ -40,5 +40,16 @@ var LoginSchema = new Schema({
   ],
 });
 
+LoginSchema.pre("save", async function (next) {
+  if (this.isNew || this.isModified("password")) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+  next();
+});
+// custom method to compare and validate password for logging in
+LoginSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
 var User = mongoose.model("User", LoginSchema);
 module.exports = User;
