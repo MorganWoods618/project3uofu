@@ -15,8 +15,8 @@ function DashCalendar() {
 
  return (
     <ChakraProvider>
-      <Heading color='white'>Travel Calendar</Heading>
-      <Text color='white'>
+      <Heading>Travel Calendar</Heading>
+      <Text>
         <Calendar onChange={setDate} value={date} selectRange={true}/>
       </Text>
       {date.length > 0 ? (
@@ -26,7 +26,7 @@ function DashCalendar() {
         <span>End:</span> {date[1].toDateString()}
       </Center>
            ) : (
-      <Center color='white'>
+      <Center>
         <span>Default selected date:</span>{' '} {date.toDateString()}
       </Center>
            )}
