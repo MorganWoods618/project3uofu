@@ -6,14 +6,13 @@ export default {
    // Authentication methods
    // ===============================================
 
-   locations: function(cityValue) {
+   locationDetails: function(xid) {
 
 
-   // To get XID
+   // To get location details
       const options = {
          method: 'GET',
-         url: 'https://opentripmap-places-v1.p.rapidapi.com/en/places/geoname',
-         params: {name: `${cityValue}`},
+         url: 'https://opentripmap-places-v1.p.rapidapi.com/en/places/xid/' + `${xid}`,
          headers: {
            'X-RapidAPI-Key': '2b2d262296msh6a27b9e5fb577fap172651jsn21e262119317',
            'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
