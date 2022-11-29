@@ -51,11 +51,11 @@ function DashboardPage() {
         </Tabs>
         <Heading color="white">Our Top Locations to Visit!</Heading>
         <Text color="white">Cindy's Spots! </Text>
-        <Text color="white">Locations: </Text>
+        <Text color="white">Locations: Costa Rica and Thailand </Text>
         <Text color="white">Luna's Spots! </Text>
-        <Text color="white">Locations: </Text>
+        <Text color="white">Locations: Hawaii and Germany</Text>
         <Text color="white">Morgan's Spots! </Text>
-        <Text color="white">Locations: </Text>
+        <Text color="white">Locations: Puerto Rico and Playa Del Carmen</Text>
         <Text></Text>
       </VStack>
     </ChakraProvider>

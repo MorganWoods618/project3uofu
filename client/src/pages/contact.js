@@ -5,25 +5,20 @@ import {
   FormControl,
   FormLabel,
   Heading,
-  IconButton,
   Input,
   InputGroup,
   InputLeftElement,
-  Link,
   Stack,
   Textarea,
-  Tooltip,
-  useClipboard,
   useColorModeValue,
   VStack,
   ChakraProvider
 } from '@chakra-ui/react';
 import React from 'react';
-import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs';
-import { MdEmail, MdOutlineEmail } from 'react-icons/md';
+import { BsPerson } from 'react-icons/bs';
+import { MdOutlineEmail } from 'react-icons/md';
 
-export default function ContactFormWithSocialButtons() {
-  const { hasCopied, onCopy } = useClipboard('example@example.com');
+export default function() {
 
   return (
     <ChakraProvider>
