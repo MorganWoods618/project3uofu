@@ -95,7 +95,7 @@ function DestinationPage() {
                 p={6}
                 overflow={"hidden"}
               >
-                <Stack>
+                <Stack align={'center'}>
                   {/* cannot pull image, doesn't show on all of them */}
                   {/* <Image src={location.data.preview.source} layout={"fill"} /> */}
                   <Heading
